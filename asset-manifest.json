@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/studyon/static/css/main.c3683e78.chunk.css",
+    "main.js": "/studyon/static/js/main.d5815d3c.chunk.js",
+    "main.js.map": "/studyon/static/js/main.d5815d3c.chunk.js.map",
+    "runtime-main.js": "/studyon/static/js/runtime-main.09de619e.js",
+    "runtime-main.js.map": "/studyon/static/js/runtime-main.09de619e.js.map",
+    "static/css/2.cfd729e7.chunk.css": "/studyon/static/css/2.cfd729e7.chunk.css",
+    "static/js/2.96d5b871.chunk.js": "/studyon/static/js/2.96d5b871.chunk.js",
+    "static/js/2.96d5b871.chunk.js.map": "/studyon/static/js/2.96d5b871.chunk.js.map",
+    "index.html": "/studyon/index.html",
+    "precache-manifest.2c94076471f237282f294d7ec709effe.js": "/studyon/precache-manifest.2c94076471f237282f294d7ec709effe.js",
+    "service-worker.js": "/studyon/service-worker.js",
+    "static/css/2.cfd729e7.chunk.css.map": "/studyon/static/css/2.cfd729e7.chunk.css.map",
+    "static/css/main.c3683e78.chunk.css.map": "/studyon/static/css/main.c3683e78.chunk.css.map",
+    "static/js/2.96d5b871.chunk.js.LICENSE.txt": "/studyon/static/js/2.96d5b871.chunk.js.LICENSE.txt",
+    "static/media/persik.png": "/studyon/static/media/persik.4e1ec840.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.09de619e.js",
+    "static/css/2.cfd729e7.chunk.css",
+    "static/js/2.96d5b871.chunk.js",
+    "static/css/main.c3683e78.chunk.css",
+    "static/js/main.d5815d3c.chunk.js"
+  ]
+}
