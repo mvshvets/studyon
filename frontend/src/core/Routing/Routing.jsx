@@ -1,6 +1,6 @@
 import React, {useContext} from 'react'
 import {Panel, Root, View} from '@vkontakte/vkui'
-import {ProfilePage, MainPage} from '../../pages'
+import {ZoomPage, ProfilePage, MainPage} from '../../pages'
 import {PageContext} from '../context/Page'
 
 export const Routing = React.memo(() => {
@@ -24,6 +24,20 @@ export const Routing = React.memo(() => {
                     <Panel id={'profile'}>
                         <ProfilePage/>
                     </Panel>
+                </View>
+
+                 {/** Страница zoom-zoom */}
+                 <View id={'zoom'} activePanel={pageName}>
+                    {/** Страница профиля */}
+                    
+                    <Panel id={'zoom'}>
+                        <ZoomPage/>
+                    </Panel>
+                    
+                    <Panel id={'zoom-lesson'}>
+                        <ZoomPage/>
+                    </Panel>
+
                 </View>
             </Root>
     )
