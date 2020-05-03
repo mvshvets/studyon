@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import style from './Toggle.module.sass'
 import {PAGES_NAME} from './consts'
 
-export const Toggle = props => {
+export const Toggle = React.memo(props => {
     const {activeCircle, onClick} = props
 
     const handleToggle = useCallback((name) => () => {
@@ -19,7 +19,7 @@ export const Toggle = props => {
     return <ul className={style.toggle}>
         {toggleGroup}
     </ul>
-}
+})
 
 Toggle.propTypes = {
     activeCircle: PropTypes.string,

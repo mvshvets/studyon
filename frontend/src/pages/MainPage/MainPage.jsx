@@ -3,8 +3,7 @@ import {Gallery} from '@vkontakte/vkui'
 import {Useful, Profile, Rating, Store, Zoom, Prospects} from './components'
 import './MainPage.css';
 
-export const MainPage = props => {
-    const {handleView} = props
+export const MainPage = React.memo(() => {
     return (
         <Gallery
             style={{height: '100vh'}}
@@ -13,7 +12,7 @@ export const MainPage = props => {
             {/** 'Полезное' */}
             <Useful/>
             {/** 'Профиль' */}
-            <Profile handleView={handleView}/>
+            <Profile/>
             {/** 'Рейтинг' */}
             <Rating/>
             {/** 'Магазин' */}
@@ -24,5 +23,5 @@ export const MainPage = props => {
             <Prospects/>
         </Gallery>
     )
-}
+})
 
