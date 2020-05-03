@@ -5,8 +5,9 @@ import ReactDOM from "react-dom"
 import bridge from "@vkontakte/vk-bridge"
 import App from "./App"
 
-//import '@vkontakte/vkui/dist/vkui.css'
+import '@vkontakte/vkui/dist/vkui.css'
 import './index.module.sass'
+
 // Init VK  Mini App
 bridge.send("VKWebAppInit")
 
