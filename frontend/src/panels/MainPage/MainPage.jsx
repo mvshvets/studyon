@@ -19,7 +19,7 @@ export const MainPage = props => {
             {/** 'Магазин' */}
             <Store/>
             {/** 'Zoom-zoom' */}
-            <Zoom/>
+            <Zoom handleView={handleView}/>
             {/** 'Перспективы' */}
             <Prospects/>
         </Gallery>

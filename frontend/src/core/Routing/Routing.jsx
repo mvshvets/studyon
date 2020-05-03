@@ -29,9 +29,15 @@ export const Routing = React.memo(() => {
                  {/** Страница zoom-zoom */}
                  <View id={'zoom'} activePanel={pageName}>
                     {/** Страница профиля */}
+                    
                     <Panel id={'zoom'}>
                         <ZoomPage/>
                     </Panel>
+                    
+                    <Panel id={'zoom-lesson'}>
+                        <ZoomPage/>
+                    </Panel>
+
                 </View>
             </Root>
     )
