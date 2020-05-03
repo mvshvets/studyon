@@ -3,7 +3,7 @@ import style from './Prospects.module.sass'
 import {rocket} from '../../../../shared/img'
 import {H1, H3, Button} from '../../../../shared/components'
 
-export const Prospects = () => {
+export const Prospects = React.memo(() => {
 
 	return (
 		<div className={style.prospects}>
@@ -13,4 +13,4 @@ export const Prospects = () => {
 			</div>
 			<Button text={<H1 text={'ПЕРСПЕКТИВЫ'}/>} className={style.prospects__button}/>
 		</div>)
-}
+})

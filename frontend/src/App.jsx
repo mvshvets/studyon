@@ -1,22 +1,17 @@
-import React, {useState} from 'react'
-import {Panel, Root, View} from '@vkontakte/vkui'
-import {MainPage} from './panels'
+import React from 'react'
+import {Compose} from './shared/components'
+import {PageContextProvider, LoaderContextProvider, DocumentTitleContextProvider, UserContextProvider} from './core/context'
+import {Routing} from './core/Routing'
 
-const App = () => {
-    const [activeView] = useState('home')
-    const [activePanel] = useState('home')
+export const App = React.memo(() => {
     return (
-        <Root activeView={activeView}>
-            {/** Основной сценарий */}
-            <View id="home" activePanel={activePanel}>
-                {/** Основная страница */}
-                <Panel id={'home'}>
-                    <MainPage/>
-                </Panel>
-            </View>
-        </Root>
+        <Compose
+            components={[
+                PageContextProvider,
+                DocumentTitleContextProvider,
+            ]}
+        >
+            <Routing/>
+        </Compose>
     )
-}
-
-export default App
-
+})

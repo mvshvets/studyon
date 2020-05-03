@@ -3,7 +3,7 @@ import style from './Store.module.sass'
 import {store} from '../../../../shared/img'
 import {H1, H3, Button} from '../../../../shared/components'
 
-export const Store = () => {
+export const Store = React.memo(() => {
 
 	return (
 		<div className={style.store}>
@@ -13,4 +13,4 @@ export const Store = () => {
 			</div>
 			<Button text={<H1 text={'МАГАЗИН'}/>} className={style.store__button}/>
 		</div>)
-}
+})

@@ -3,7 +3,7 @@ import style from './Useful.module.sass'
 import {cinema} from '../../../../shared/img'
 import {Button, H1, H3} from '../../../../shared/components'
 
-export const Useful = () => {
+export const Useful = React.memo(() => {
 
     return (
         <div className={style.useful}>
@@ -13,4 +13,4 @@ export const Useful = () => {
             </div>
             <Button text={<H1 text={'ПОЛЕЗНОЕ'}/>} className={style.useful__button}/>
         </div>)
-}
+})

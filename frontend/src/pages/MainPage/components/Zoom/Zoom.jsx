@@ -3,7 +3,7 @@ import style from './Zoom.module.sass'
 import {zoom} from '../../../../shared/img'
 import {H1, H3, Button} from '../../../../shared/components'
 
-export const Zoom = () => {
+export const Zoom = React.memo(() => {
 
 	return (
 		<div className={style.zoom}>
@@ -13,4 +13,4 @@ export const Zoom = () => {
 			</div>
 			<Button text={<H1 text={'ZOOM-ZOOM'}/>} className={style.zoom__button}/>
 		</div>)
-}
+})
