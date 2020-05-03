@@ -2,7 +2,7 @@ import React, {useContext} from 'react'
 import style from './Zoom.module.sass'
 import {zoom} from '../../../../shared/img'
 import {H1, H3, Button} from '../../../../shared/components'
-import {PageContext} from '../../../../core/context/Page'
+import {PageContext} from '../../../../core/context'
 
 export const Zoom = React.memo(() => {
 	const { setPageName } = useContext(PageContext)
