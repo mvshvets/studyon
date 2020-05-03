@@ -1,24 +1,25 @@
-import React, {useState} from 'react'
+import React, {useContext} from 'react'
 import {Panel, Root, View} from '@vkontakte/vkui'
 import {ProfilePage, MainPage} from '../../pages'
+import {PageContext} from '../context/Page'
 
 export const Routing = React.memo(() => {
-    const [activeView, setActiveView] = useState('home')
-    const [activePanel] = useState('home')
+    const { pageName } = useContext(PageContext)
+
     return (
-            <Root activeView={activeView}>
+            <Root activeView={pageName}>
 
                 {/** Основной сценарий */}
-                <View id={'home'} activePanel={activePanel}>
+                <View id={'home'} activePanel={pageName}>
 
                     {/** Основная страница */}
                     <Panel id={'home'}>
-                        <MainPage handleView={setActiveView}/>
+                        <MainPage/>
                     </Panel>
                 </View>
 
                 {/** Страница профиля */}
-                <View id={'profile'} activePanel={activePanel}>
+                <View id={'profile'} activePanel={pageName}>
                     {/** Страница профиля */}
                     <Panel id={'profile'}>
                         <ProfilePage/>
