@@ -9,7 +9,7 @@ export const Prospects = () => {
 		<div className={style.prospects}>
 			<img src={rocket} alt={'Перспективы'}/>
 			<div className={style.prospects__text}>
-				<H3 text={'Будь всегда на связи.'}/>
+				<H3 text={'Какие курсы надо пройти, чтобы стать самым-самым!'}/>
 			</div>
 			<Button text={<H1 text={'ПЕРСПЕКТИВЫ'}/>} className={style.prospects__button}/>
 		</div>)
