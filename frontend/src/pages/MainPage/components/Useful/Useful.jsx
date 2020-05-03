@@ -1,9 +1,11 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import style from './Useful.module.sass'
 import {cinema} from '../../../../shared/img'
 import {Button, H1, H3} from '../../../../shared/components'
+import {PageContext} from '../../../../core/context/Page'
 
 export const Useful = React.memo(() => {
+    const { setPageName } = useContext(PageContext)
 
     return (
         <div className={style.useful}>
@@ -11,6 +13,6 @@ export const Useful = React.memo(() => {
             <div className={style.useful__text}>
                 <H3 text={'Актуальные материалы от блогеров'}/>
             </div>
-            <Button text={<H1 text={'ПОЛЕЗНОЕ'}/>} className={style.useful__button}/>
+            <Button text={<H1 text={'ПОЛЕЗНОЕ'}/>} className={style.useful__button} onClick={setPageName} id={'useful'}/>
         </div>)
 })
