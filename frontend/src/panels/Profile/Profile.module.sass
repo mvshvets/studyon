@@ -1,6 +1,17 @@
 @import 'src/shared/styles/const'
 
 .profile
-  background-color: $g_purple
+  background: url('purple.png') no-repeat 50% 50%
+  background-size: cover
   height: $g_height
+  display: flex
+  flex-direction: column
+  align-items: center
 
+  img
+    margin: 118px 0 0
+
+  &__text
+    text-align: center
+    width: 200px
+    color: #fff

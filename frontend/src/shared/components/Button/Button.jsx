@@ -8,5 +8,5 @@ export const Button = props => {
 };
 
 Button.propTypes = {
-	text: PropTypes.string
+	text: PropTypes.object
 }

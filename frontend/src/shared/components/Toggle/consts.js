@@ -1,0 +1,1 @@
+export const PAGES_NAME = ['useful', 'profile', 'rating', 'store', 'zoom', 'prospects']

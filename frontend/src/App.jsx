@@ -4,7 +4,7 @@ import {Useful, Profile, Rating, Store, Zoom, Prospects} from './panels'
 
 const App = () => {
     const [activeView] = useState('home')
-    const [activePanel] = useState('useful')
+    const [activePanel, setActivePanel] = useState('useful')
     return (
         <Root activeView={activeView}>
 
@@ -13,12 +13,12 @@ const App = () => {
 
                 {/** 'Полезное' */}
                 <Panel id={'useful'}>
-                    <Useful/>
+                    <Useful id={activePanel}/>
                 </Panel>
 
                 {/** 'Профиль' */}
                 <Panel id={'profile'}>
-                    <Profile/>
+                    <Profile id={activePanel}/>
                 </Panel>
 
                 {/** 'Рейтинг' */}
