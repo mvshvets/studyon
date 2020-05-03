@@ -3,7 +3,7 @@ import style from './Rating.module.sass'
 import {rating} from '../../../../shared/img'
 import {H1, H3, Button} from '../../../../shared/components'
 
-export const Rating = () => {
+export const Rating = React.memo(() => {
 
 	return (
 		<div className={style.rating}>
@@ -13,4 +13,4 @@ export const Rating = () => {
 			</div>
 			<Button text={<H1 text={'РЕЙТИНГ'}/>} className={style.rating__button}/>
 		</div>)
-}
+})

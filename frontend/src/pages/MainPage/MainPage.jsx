@@ -3,7 +3,7 @@ import {Gallery} from '@vkontakte/vkui'
 import {Useful, Profile, Rating, Store, Zoom, Prospects} from './components'
 import './MainPage.css';
 
-export const MainPage = props => {
+export const MainPage = React.memo(props => {
     const {handleView} = props
     return (
         <Gallery
@@ -24,5 +24,5 @@ export const MainPage = props => {
             <Prospects/>
         </Gallery>
     )
-}
+})
 
