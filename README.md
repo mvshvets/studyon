@@ -1,0 +1,1 @@
+Десктоп-версию приложения смотреть здесь: [StudyOn](https://mvshvets.github.io/studyon/)
