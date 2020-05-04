@@ -35,7 +35,9 @@ class CourseList(BaseResource):
                         'get'
                     )['progresses'][0]
 
-                    course['progress'] = round(progress['n_steps_passed'] / progress['n_steps'] * 100, 2)
+                    # course['progress'] = round(progress['n_steps_passed'] / progress['n_steps'] * 100, 2)
+                    course['cost'] = progress['cost']
+                    course['score'] = progress['score']
                     course['is_complete'] = progress['is_passed']
                     course['is_subscribed'] = True
                 else:
