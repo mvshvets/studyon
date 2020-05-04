@@ -14,11 +14,15 @@ export const Header = React.memo(props => {
         setPanelName(id)
     }, [setPageName, setPanelName])
 
+    const setToSettings = useCallback(id => {
+        setPanelName(id)
+    }, [setPanelName])
+
     return (
             <header className={`${style.header} ${style[background]}`}>
                 <div className={style.header__nav}>
-                <ButtonIcon icon={home_icon} onClick={setNavigation} view={'home'}/>
-                {isSettings && <img src={settings_icon} alt={'Настройки'}/>}
+                <ButtonIcon icon={home_icon} onClick={setNavigation} view={'home'} alt={'Вернуться назад'}/>
+                {isSettings && <ButtonIcon icon={settings_icon} onClick={setToSettings} view={'settings'} alt={'Настройки'}/>}
                 </div>
                 <div style={{color: '#fff'}}>
                     <H3 text={title}/>

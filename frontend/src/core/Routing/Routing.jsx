@@ -1,6 +1,6 @@
 import React, {useContext} from 'react'
 import {Panel, Root, View} from '@vkontakte/vkui'
-import {ZoomPage, ProfilePage, MainPage, UsefulPage, RatingPage, StorePage, ProspectsPage} from '../../pages'
+import {ZoomPage, ProfilePage, MainPage, UsefulPage, RatingPage, StorePage, ProspectsPage, SettingsPage} from '../../pages'
 import {PageContext} from '../context/Page'
 
 export const Routing = React.memo(() => {
@@ -33,6 +33,11 @@ export const Routing = React.memo(() => {
                 {/** Страница профиля */}
                 <Panel id={'profile'}>
                     <ProfilePage/>
+                </Panel>
+
+                {/** Страница настроек */}
+                <Panel id={'settings'}>
+                    <SettingsPage/>
                 </Panel>
             </View>
 
