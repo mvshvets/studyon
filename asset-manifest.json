@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/studyon/static/css/main.185af649.chunk.css",
-    "main.js": "/studyon/static/js/main.f7dea6cb.chunk.js",
-    "main.js.map": "/studyon/static/js/main.f7dea6cb.chunk.js.map",
+    "main.css": "/studyon/static/css/main.7d65beaa.chunk.css",
+    "main.js": "/studyon/static/js/main.903e70e1.chunk.js",
+    "main.js.map": "/studyon/static/js/main.903e70e1.chunk.js.map",
     "runtime-main.js": "/studyon/static/js/runtime-main.09de619e.js",
     "runtime-main.js.map": "/studyon/static/js/runtime-main.09de619e.js.map",
     "static/css/2.cfd729e7.chunk.css": "/studyon/static/css/2.cfd729e7.chunk.css",
-    "static/js/2.78b5f214.chunk.js": "/studyon/static/js/2.78b5f214.chunk.js",
-    "static/js/2.78b5f214.chunk.js.map": "/studyon/static/js/2.78b5f214.chunk.js.map",
+    "static/js/2.b994c651.chunk.js": "/studyon/static/js/2.b994c651.chunk.js",
+    "static/js/2.b994c651.chunk.js.map": "/studyon/static/js/2.b994c651.chunk.js.map",
     "index.html": "/studyon/index.html",
-    "precache-manifest.65f861c27e70517850b976973159f33d.js": "/studyon/precache-manifest.65f861c27e70517850b976973159f33d.js",
+    "precache-manifest.1f413d5407bf9da25a690037abd59786.js": "/studyon/precache-manifest.1f413d5407bf9da25a690037abd59786.js",
     "service-worker.js": "/studyon/service-worker.js",
     "static/css/2.cfd729e7.chunk.css.map": "/studyon/static/css/2.cfd729e7.chunk.css.map",
-    "static/css/main.185af649.chunk.css.map": "/studyon/static/css/main.185af649.chunk.css.map",
-    "static/js/2.78b5f214.chunk.js.LICENSE.txt": "/studyon/static/js/2.78b5f214.chunk.js.LICENSE.txt",
+    "static/css/main.7d65beaa.chunk.css.map": "/studyon/static/css/main.7d65beaa.chunk.css.map",
+    "static/js/2.b994c651.chunk.js.LICENSE.txt": "/studyon/static/js/2.b994c651.chunk.js.LICENSE.txt",
     "static/media/index.module.sass": "/studyon/static/media/SourceCodePro-Bold.03c11f6b.ttf",
     "static/media/cinema.png": "/studyon/static/media/cinema.c7395066.png",
     "static/media/rating.png": "/studyon/static/media/rating.c406609c.png",
@@ -26,8 +26,8 @@
   "entrypoints": [
     "static/js/runtime-main.09de619e.js",
     "static/css/2.cfd729e7.chunk.css",
-    "static/js/2.78b5f214.chunk.js",
-    "static/css/main.185af649.chunk.css",
-    "static/js/main.f7dea6cb.chunk.js"
+    "static/js/2.b994c651.chunk.js",
+    "static/css/main.7d65beaa.chunk.css",
+    "static/js/main.903e70e1.chunk.js"
   ]
 }
