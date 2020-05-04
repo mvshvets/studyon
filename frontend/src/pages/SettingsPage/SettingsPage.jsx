@@ -5,11 +5,13 @@ import style from './SettingsPage.module.sass'
 
 export const SettingsPage = React.memo(() => {
     return (
-        <div className={style.settings}>
+        <>
             <Header title={'НАСТРОЙКИ'} background={'red'} icon={setting}/>
-            <Stub/>
+            <div className={style.settings}>
+                <Stub/>
+            </div>
             <Footer/>
-        </div>
+        </>
     )
 })
 

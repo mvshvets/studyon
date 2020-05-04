@@ -1,0 +1,1 @@
+export {default as achive1} from './achive1.png'
