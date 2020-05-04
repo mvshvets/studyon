@@ -1,13 +1,14 @@
 import React from 'react'
-import {Header} from '../../core/components'
+import {Footer, Header, Stub} from '../../core/components'
 import {cinema} from '../../shared/img'
-import {StubPage} from '..'
+import style from './UsefulPage.module.sass'
 
 export const UsefulPage = React.memo(() => {
     return (
-        <div>
+        <div className={style.useful}>
             <Header title={'ИНТЕРЕСНОЕ'} background={'red'} icon={cinema}/>
-            <StubPage/>
+            <Stub/>
+            <Footer/>
         </div>
     )
 })

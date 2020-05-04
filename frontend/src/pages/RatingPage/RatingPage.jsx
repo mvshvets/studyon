@@ -1,13 +1,14 @@
 import React from 'react'
-import {Header} from '../../core/components'
+import {Footer, Header, Stub} from '../../core/components'
 import {rating} from '../../shared/img'
-import {StubPage} from '..'
+import style from './RatingPage.module.sass'
 
 export const RatingPage = React.memo(() => {
     return (
-        <div>
+        <div className={style.rating}>
             <Header title={'РЕЙТИНГ'} background={'cyan'} icon={rating}/>
-            <StubPage/>
+            <Stub/>
+            <Footer/>
         </div>
     )
 })
