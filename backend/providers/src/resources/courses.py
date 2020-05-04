@@ -55,6 +55,9 @@ class CourseList(BaseResource):
 
         return retval
 
+    def post(self):
+        return self.get()
+
 class Course(BaseResource):
     def get(self, course_id):
         return {}
