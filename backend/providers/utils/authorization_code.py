@@ -8,8 +8,6 @@ SECRET_ID = 'o0zVwGHhAtOQ5mHftbSqW30eMaYP9JycFJHtYCTWPB9ZK877P6gr1DGIoLImOG0w8oN
 AUTH_URL = 'https://stepik.org/oauth2/authorize/?response_type=code&client_id={}'.format(CLIENT_ID)
 ACCESS_TOKEN_URL = 'https://stepik.org/oauth2/token/'
 
-webbrowser.open(AUTH_URL)
-
 class Handler(BaseHTTPRequestHandler):
     def do_GET(handler):
         path = urlparse(handler.path)
@@ -22,20 +20,24 @@ class Handler(BaseHTTPRequestHandler):
 
         auth = requests.auth.HTTPBasicAuth(CLIENT_ID, SECRET_ID)
         response = requests.post(
-            ACCESS_TOKEN_URL + '?code=' + code,
+            ACCESS_TOKEN_URL,
             data={
-                'grant_type': 'authorization_code'
+                'grant_type': 'authorization_code',
+                'code': code,
+                'redirect_uri': 'http://localhost:8000' # Неважно что
             },
             auth=auth
         )
 
-        print(response)
-
         handler.send_response(200)
         handler.send_header("Content-type", "text/html")
         handler.end_headers()
+        handler.wfile.write(response.json()['access_token'].encode())
 
-def run(server_class=HTTPServer, handler_class=Handler):
+def handle_request(server_class=HTTPServer, handler_class=Handler):
     server_address = ('', 8000)
     httpd = server_class(server_address, handler_class)
-    httpd.serve_forever()
+    httpd.handle_request()
+
+webbrowser.open(AUTH_URL)
+handle_request()
