@@ -4,7 +4,6 @@ def dict_slice(obj, by):
 
     retval = {}
     for key in by:
-        print(key)
         if key in obj:
             retval[key] = obj[key]
 

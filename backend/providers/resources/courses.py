@@ -1,19 +1,6 @@
-from flask_restful import Resource, reqparse
-
-from stepik import Stepik
+from providers.stepik import Stepik
+from resources.base import BaseResource
 from utils import dict_slice
-
-class BaseResource(Resource):
-    def __init__(self, arguments):
-        self.parser = reqparse.RequestParser()
-
-        for argument in arguments:
-            self.parser.add_argument(**argument)
-
-        super(BaseResource, self).__init__()
-
-    def parse_args(self):
-        return self.parser.parse_args()
 
 class CourseList(BaseResource):
     def get(self):

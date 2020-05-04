@@ -1,7 +1,7 @@
 from flask import Flask
 from flask_restful import Api
-from courses import CourseList, Course
-from domain import domain
+from resources.courses import CourseList, Course
+from resources.domain import domain
 
 routes = {
     '/api/v1/courses': CourseList,
