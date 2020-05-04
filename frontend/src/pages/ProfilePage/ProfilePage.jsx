@@ -1,13 +1,14 @@
 import React from 'react'
-import {Header} from '../../core/components'
+import {Header, Stub, Footer} from '../../core/components'
 import {student} from '../../shared/img'
-import {StubPage} from '..'
+import style from './ProfilePage.module.sass'
 
 export const ProfilePage = React.memo(() => {
     return (
-        <div>
+        <div className={style.profile}>
             <Header title={'ПРОФИЛЬ'} background={'purple'} icon={student} isSettings/>
-            <StubPage/>
+            <Stub/>
+            <Footer/>
         </div>
     )
 })

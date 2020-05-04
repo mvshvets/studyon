@@ -1,13 +1,14 @@
 import React from 'react'
-import {Header} from '../../core/components'
+import {Footer, Header, Stub} from '../../core/components'
 import {setting} from '../../shared/img'
-import {StubPage} from '..'
+import style from './SettingsPage.module.sass'
 
 export const SettingsPage = React.memo(() => {
     return (
-        <div>
+        <div className={style.settings}>
             <Header title={'НАСТРОЙКИ'} background={'red'} icon={setting}/>
-            <StubPage/>
+            <Stub/>
+            <Footer/>
         </div>
     )
 })
