@@ -13,9 +13,8 @@ export const Button = React.memo(props => {
 })
 
 Button.propTypes = {
-
 	text: PropTypes.oneOfType([PropTypes.string, PropTypes.object]).isRequired,
-	id: PropTypes.string,
+	view: PropTypes.oneOfType(PropTypes.string, PropTypes.object),
 	className: PropTypes.string,
 	onClick: PropTypes.func
 }

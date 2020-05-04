@@ -8,6 +8,8 @@ import Icon28Users from '@vkontakte/icons/dist/28/users';
 import FormLayout from '@vkontakte/vkui/dist/components/FormLayout/FormLayout';
 import Button from '@vkontakte/vkui/dist/components/Button/Button';
 import Input from '@vkontakte/vkui/dist/components/Input/Input';
+import {zoom} from '../../shared/img'
+import {Header} from '../../core/components'
 
 
 
@@ -38,6 +40,7 @@ export const ZoomPage = React.memo(() => {
 
     return (
         <div>
+            <Header title={'ZOOM-ZOOM'} background={'cyan'} icon={zoom}/>
             <Group>
                 <Cell expandable before={<Icon28AddOutline />} >
                     Создать урок

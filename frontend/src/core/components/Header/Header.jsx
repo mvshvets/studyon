@@ -1,15 +1,23 @@
-import React from 'react'
+import React, {useCallback, useContext} from 'react'
 import style from './Header.module.sass'
 import {home_icon, settings_icon} from '../../../shared/img'
 import PropTypes from 'prop-types'
-import {H3} from '../../../shared/components/'
+import {ButtonIcon, H3} from '../../../shared/components/'
+import {PageContext} from '../../context'
 
 export const Header = React.memo(props => {
     const {title, background, icon, isSettings} = props
+    const { setPageName, setPanelName } = useContext(PageContext)
+
+    const setNavigation = useCallback(id => {
+        setPageName(id)
+        setPanelName(id)
+    }, [setPageName, setPanelName])
+
     return (
             <header className={`${style.header} ${style[background]}`}>
                 <div className={style.header__nav}>
-                <img src={home_icon} alt={'Вернуться "Домой"'}/>
+                <ButtonIcon icon={home_icon} onClick={setNavigation} view={'home'}/>
                 {isSettings && <img src={settings_icon} alt={'Настройки'}/>}
                 </div>
                 <div style={{color: '#fff'}}>

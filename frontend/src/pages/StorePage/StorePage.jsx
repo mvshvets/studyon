@@ -1,12 +1,13 @@
 import React from 'react'
 import {Header} from '../../core/components'
-import {student} from '../../shared/img'
+import {store} from '../../shared/img'
+import {StubPage} from '..'
 
 export const StorePage = React.memo(() => {
     return (
         <div>
-            <Header title={'ПРОФИЛЬ'} background={'purple'} icon={student} isSettings/>
-            Профиль
+            <Header title={'МАГАЗИН'} background={'orange'} icon={store}/>
+            <StubPage/>
         </div>
     )
 })
