@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b2562ce24e5be6d099f553246b6bdc84",
+    "revision": "469f3f39eccce7e850f1187b52249e46",
     "url": "/studyon/index.html"
   },
   {
-    "revision": "20cd29c6fe4061051d3f",
+    "revision": "489762a21532290d10af",
     "url": "/studyon/static/css/2.cfd729e7.chunk.css"
   },
   {
-    "revision": "e74f4e617945475d31f5",
+    "revision": "45bc17d7ef51419ff13c",
     "url": "/studyon/static/css/main.43c0a8ee.chunk.css"
   },
   {
-    "revision": "20cd29c6fe4061051d3f",
-    "url": "/studyon/static/js/2.48cf67f3.chunk.js"
+    "revision": "489762a21532290d10af",
+    "url": "/studyon/static/js/2.0a150d80.chunk.js"
   },
   {
     "revision": "13b685b3db9ae92c2d07c213e5e3506f",
-    "url": "/studyon/static/js/2.48cf67f3.chunk.js.LICENSE.txt"
+    "url": "/studyon/static/js/2.0a150d80.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "e74f4e617945475d31f5",
-    "url": "/studyon/static/js/main.f2d1bc7b.chunk.js"
+    "revision": "45bc17d7ef51419ff13c",
+    "url": "/studyon/static/js/main.b3ccbedd.chunk.js"
   },
   {
     "revision": "108bd5b236504d6531be",
