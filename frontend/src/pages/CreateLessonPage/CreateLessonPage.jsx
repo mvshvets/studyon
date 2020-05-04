@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import {Header} from '../../core/components'
+import {Header,Footer} from '../../core/components'
 import {zoom} from '../../shared/img'
 import axios from 'axios-jsonp-pro';
 import FormLayout from '@vkontakte/vkui/dist/components/FormLayout/FormLayout';
@@ -74,7 +74,7 @@ export const CreateLessonPage = React.memo(() => {
 
             </FormLayout>
    
-
+        <Footer />
         </div>
     )
 })

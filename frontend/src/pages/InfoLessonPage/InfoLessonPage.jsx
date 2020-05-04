@@ -1,5 +1,5 @@
 import React from 'react'
-import {Header} from '../../core/components'
+import {Header,Footer} from '../../core/components'
 import {zoom} from '../../shared/img'
 
 export const InfoLessonPage = React.memo(() => {
@@ -7,6 +7,8 @@ export const InfoLessonPage = React.memo(() => {
         <div>
             <Header title={'Список уроков'} background={'cyan'} icon={zoom}/>
             <h1>Список уроков</h1>
+
+            <Footer/>
         </div>
     )
 })
