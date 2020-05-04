@@ -5,10 +5,9 @@ import Icon28DocumentOutline from '@vkontakte/icons/dist/28/document_outline';
 import Icon28AddOutline from '@vkontakte/icons/dist/28/add_outline';
 import Icon28Users from '@vkontakte/icons/dist/28/users';
 import {zoom} from '../../shared/img'
-import {Header} from '../../core/components'
+import {Footer, Header} from '../../core/components'
+import style from './ZoomPage.module.sass'
 import {PageContext} from '../../core/context'
-
-
 
 
 export const ZoomPage = React.memo(() => {
@@ -41,7 +40,7 @@ export const ZoomPage = React.memo(() => {
 
 
     return (
-        <div>
+        <div className={style.zoom}>
             <Header title={'ZOOM-ZOOM'} background={'cyan'} icon={zoom}/>
             <Group>
                 <Cell expandable before={<Icon28AddOutline />} onClick={setLessons} >
@@ -62,8 +61,7 @@ export const ZoomPage = React.memo(() => {
 
             </Group>
 
-          
-
+            <Footer/>
         </div>
 
     )

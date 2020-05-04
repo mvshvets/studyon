@@ -1,13 +1,14 @@
 import React from 'react'
-import {Header} from '../../core/components'
+import {Footer, Header, Stub} from '../../core/components'
 import {store} from '../../shared/img'
-import {StubPage} from '..'
+import style from './StorePage.module.sass'
 
 export const StorePage = React.memo(() => {
     return (
-        <div>
+        <div className={style.store}>
             <Header title={'МАГАЗИН'} background={'orange'} icon={store}/>
-            <StubPage/>
+            <Stub/>
+            <Footer/>
         </div>
     )
 })
