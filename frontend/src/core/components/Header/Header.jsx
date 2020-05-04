@@ -21,8 +21,8 @@ export const Header = React.memo(props => {
     return (
             <header className={`${style.header} ${style[background]}`}>
                 <div className={style.header__nav}>
-                <ButtonIcon icon={home_icon} onClick={setNavigation} view={'home'} alt={'Вернуться назад'}/>
-                {isSettings && <ButtonIcon icon={settings_icon} onClick={setToSettings} view={'settings'} alt={'Настройки'}/>}
+                <ButtonIcon icon={home_icon} onClick={setNavigation} view={'home'} alt={'Вернуться назад'} size={40}/>
+                {isSettings && <ButtonIcon icon={settings_icon} onClick={setToSettings} view={'settings'} alt={'Настройки'} size={40}/>}
                 </div>
                 <div style={{color: '#fff'}}>
                     <H3 text={title}/>
