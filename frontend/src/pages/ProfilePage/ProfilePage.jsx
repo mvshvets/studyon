@@ -2,9 +2,8 @@ import React from 'react'
 import {Header, Footer} from '../../core/components'
 import {student} from '../../shared/img'
 import {achive1} from '../../shared/img/achives'
-import {piggy_bank, hint_icon} from './img'
 import style from './ProfilePage.module.sass'
-import {Progress} from './components'
+import {Progress, PiggyBank} from './components'
 
 export const ProfilePage = React.memo(() => {
     return (
@@ -16,13 +15,7 @@ export const ProfilePage = React.memo(() => {
                 <Progress/>
 
                 {/** Блок копилки */}
-                <div>
-                    <div>В вашей копилке:</div>
-                    <div>{`${'0'} монет`}</div>
-                    <div>(чеканных)</div>
-                    <img src={piggy_bank} alt={'Копилка'}/>
-                    <img src={hint_icon} alt={'Подсказка'}/>
-                </div>
+                <PiggyBank/>
 
                 {/** Блок достижений*/}
                 <div>
