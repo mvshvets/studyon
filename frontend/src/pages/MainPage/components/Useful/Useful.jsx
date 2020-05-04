@@ -13,6 +13,6 @@ export const Useful = React.memo(() => {
             <div className={style.useful__text}>
                 <H3 text={'Актуальные материалы от блогеров'}/>
             </div>
-            <Button text={<H1 text={'ПОЛЕЗНОЕ'}/>} className={style.useful__button} onClick={setPageName} id={'useful'}/>
+            <Button text={<H1 text={'ПОЛЕЗНОЕ'}/>} className={style.useful__button} onClick={setPageName} view={'useful'}/>
         </div>)
 })

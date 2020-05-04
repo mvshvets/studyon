@@ -13,6 +13,6 @@ export const Prospects = React.memo(() => {
 			<div className={style.prospects__text}>
 				<H3 text={'Какие курсы надо пройти, чтобы стать самым-самым!'}/>
 			</div>
-			<Button text={<H1 text={'ПЕРСПЕКТИВЫ'}/>} className={style.prospects__button} onClick={setPageName} id={'prospects'}/>
+			<Button text={<H1 text={'ПЕРСПЕКТИВЫ'}/>} className={style.prospects__button} onClick={setPageName} view={'prospects'}/>
 		</div>)
 })

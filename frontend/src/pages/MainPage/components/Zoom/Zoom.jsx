@@ -13,6 +13,6 @@ export const Zoom = React.memo(() => {
 			<div className={style.zoom__text}>
 				<H3 text={'Будь всегда на связи.'}/>
 			</div>
-			<Button text={<H1 text={'ZOOM-ZOOM'}/>} className={style.zoom__button} onClick={setPageName} id={'zoom'}/>
+			<Button text={<H1 text={'ZOOM-ZOOM'}/>} className={style.zoom__button} onClick={setPageName} view={'zoom'}/>
 		</div>)
 })

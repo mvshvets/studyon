@@ -13,6 +13,6 @@ export const Rating = React.memo(() => {
 			<div className={style.rating__text}>
 				<H3 text={'Быстрее. Выше. Умнее.'}/>
 			</div>
-			<Button text={<H1 text={'РЕЙТИНГ'}/>} className={style.rating__button} onClick={setPageName} id={'rating'}/>
+			<Button text={<H1 text={'РЕЙТИНГ'}/>} className={style.rating__button} onClick={setPageName} view={'rating'}/>
 		</div>)
 })

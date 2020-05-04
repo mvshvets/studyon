@@ -13,6 +13,6 @@ export const Profile = React.memo(() => {
             <div className={style.profile__text}>
                 <H3 text={'Мммм... кто у нас тут такой умненький?'}/>
             </div>
-            <Button text={<H1 text={'ПРОФИЛЬ'}/>} className={style.profile__button} onClick={setPageName} id={'profile'}/>
+            <Button text={<H1 text={'ПРОФИЛЬ'}/>} className={style.profile__button} onClick={setPageName} view={'profile'}/>
         </div>)
 })

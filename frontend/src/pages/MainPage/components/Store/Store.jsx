@@ -13,6 +13,6 @@ export const Store = React.memo(() => {
 			<div className={style.store__text}>
 				<H3 text={'Покупать легко. Трудно только платить.'}/>
 			</div>
-			<Button text={<H1 text={'МАГАЗИН'}/>} className={style.store__button} onClick={setPageName} id={'store'}/>
+			<Button text={<H1 text={'МАГАЗИН'}/>} className={style.store__button} onClick={setPageName} view={'store'}/>
 		</div>)
 })

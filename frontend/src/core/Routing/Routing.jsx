@@ -4,41 +4,42 @@ import {ZoomPage, ProfilePage, MainPage} from '../../pages'
 import {PageContext} from '../context/Page'
 
 export const Routing = React.memo(() => {
-    const { pageName } = useContext(PageContext)
+    const {pageName} = useContext(PageContext)
 
     return (
-            <Root activeView={pageName}>
+        <Root activeView={pageName}>
 
-                {/** Основной сценарий */}
-                <View id={'home'} activePanel={pageName}>
+            {/** Основной сценарий */}
+            <View id={'home'} activePanel={pageName}>
 
-                    {/** Основная страница */}
-                    <Panel id={'home'}>
-                        <MainPage/>
-                    </Panel>
-                </View>
+                {/** Основная страница */}
+                <Panel id={'home'}>
+                    <MainPage/>
+                </Panel>
+            </View>
+
+            {/** Сценарий профиля */}
+            <View id={'profile'} activePanel={pageName}>
 
                 {/** Страница профиля */}
-                <View id={'profile'} activePanel={pageName}>
-                    {/** Страница профиля */}
-                    <Panel id={'profile'}>
-                        <ProfilePage/>
-                    </Panel>
-                </View>
+                <Panel id={'profile'}>
+                    <ProfilePage/>
+                </Panel>
+            </View>
 
-                 {/** Страница zoom-zoom */}
-                 <View id={'zoom'} activePanel={pageName}>
-                    {/** Страница профиля */}
-                    
-                    <Panel id={'zoom'}>
-                        <ZoomPage/>
-                    </Panel>
-                    
-                    <Panel id={'zoom-lesson'}>
-                        <ZoomPage/>
-                    </Panel>
+            {/** Сценарий zoom-zoom */}
+            <View id={'zoom'} activePanel={pageName}>
 
-                </View>
-            </Root>
+                {/** Страница zoom */}
+                <Panel id={'zoom'}>
+                    <ZoomPage/>
+                </Panel>
+
+                <Panel id={'zoom-lesson'}>
+                    <ZoomPage/>
+                </Panel>
+
+            </View>
+        </Root>
     )
 })
