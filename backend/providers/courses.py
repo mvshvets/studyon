@@ -1,58 +1,58 @@
-from flask import Flask, request
-from flask_restful import Resource, Api, reqparse
+from flask_restful import Resource, reqparse
 
 from stepik import Stepik
+from utils import dict_slice
 
-app = Flask(__name__)
-api = Api(app)
-
-class Courses(Resource):
-    def __init__(self):
+class BaseResource(Resource):
+    def __init__(self, arguments):
         self.parser = reqparse.RequestParser()
 
-        self.parser.add_argument(
-            'provider',
-            type=str,
-            required=True,
-            choices=['stepik'],
-            help='No provider name provided'
-        )
+        for argument in arguments:
+            self.parser.add_argument(**argument)
 
-        self.parser.add_argument(
-            'token',
-            type=str,
-            required=True,
-            help='No token provided'
-        )
+        super(BaseResource, self).__init__()
 
-        self.parser.add_argument(
-            'id',
-            type=str,
-            required=True,
-            help='No course id provided'
-        )
+    def parse_args(self):
+        return self.parser.parse_args()
 
-        super(Courses, self).__init__()
-
+class CourseList(BaseResource):
     def get(self):
-        args = self.parser.parse_args()
-        api = Stepik(args.token)
-
-        course = api.request('courses/{}'.format(args.id), 'get')
-        progress = None
-
-        for c in course['courses']:
-            progress = api.request('progresses/{}'.format(c['progress']), 'get')
-            progress = progress['progresses'][0]
+        args = self.parse_args()
 
         retval = {
-            'progress': round(progress['n_steps_passed'] / progress['n_steps'] * 100, 2),
-            'complete': progress['is_passed']
+            "courses": []
         }
+
+        provider = Stepik(args.token)
+
+        ids = args.ids if args.ids else []
+        if not args.ids and args.token:
+            courses = provider.request('user-courses', 'get')['user-courses']
+            for course in courses:
+                ids.append(course['course'])
+
+        for id_ in ids:
+            course_raw = provider.request('courses/{}'.format(id_), 'get')['courses'][0]
+
+            course = {
+                'id': course_raw['id'],
+                'title': course_raw['title'],
+                'description': course_raw['description']
+            }
+
+            if course_raw['progress'] and args.token:
+                progress = provider.request(
+                    'progresses/{}'.format(course_raw['progress']),
+                    'get'
+                )['progresses'][0]
+
+                course['progress'] = round(progress['n_steps_passed'] / progress['n_steps'] * 100, 2)
+                course['is_complete'] = progress['is_passed']
+
+            retval['courses'].append(dict_slice(course, args.columns))
 
         return retval
 
-api.add_resource(Courses, '/courses')
-
-if __name__ == '__main__':
-    app.run(debug=True)
+class Course(BaseResource):
+    def get(self, course_id):
+        return {}
