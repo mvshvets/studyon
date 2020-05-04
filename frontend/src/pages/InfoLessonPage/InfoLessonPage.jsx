@@ -1,15 +1,17 @@
 import React from 'react'
-import {Header,Footer} from '../../core/components'
+import {Header, Footer, Stub} from '../../core/components'
 import {zoom} from '../../shared/img'
+import style from './InfoLessonPage.module.sass'
 
 export const InfoLessonPage = React.memo(() => {
     return (
-        <div>
+        <>
             <Header title={'Список уроков'} background={'cyan'} icon={zoom}/>
-            <h1>Список уроков</h1>
-
+            <div className={style.infoLesson}>
+                <Stub/>
+            </div>
             <Footer/>
-        </div>
+        </>
     )
 })
 

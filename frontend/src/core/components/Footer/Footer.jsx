@@ -11,10 +11,9 @@ export const Footer = React.memo(() => {
         setPanelName(id)
     }, [setPageName, setPanelName])
 
-
     const footerMenuRender = useMemo(() => {
         return ICONS_MENU.map((item) => <img src={item.scr} alt={item.name} key={item.key} onClick={() => setNavigation(item.key)} width={35} height={35}/>)
-    }, [])
+    }, [setNavigation])
 
     return (
         <footer className={style.footer}>

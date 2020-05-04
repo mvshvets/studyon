@@ -5,11 +5,13 @@ import style from './RatingPage.module.sass'
 
 export const RatingPage = React.memo(() => {
     return (
-        <div className={style.rating}>
+        <>
             <Header title={'РЕЙТИНГ'} background={'cyan'} icon={rating}/>
-            <Stub/>
+            <div className={style.rating}>
+                <Stub/>
+            </div>
             <Footer/>
-        </div>
+        </>
     )
 })
 
