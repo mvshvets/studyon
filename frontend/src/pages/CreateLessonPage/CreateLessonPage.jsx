@@ -1,10 +1,12 @@
-import React, {useState} from 'react'
-import {Header, Footer} from '../../core/components'
-import {zoom} from '../../shared/img'
+import React, { useState } from 'react'
+import { Header, Footer } from '../../core/components'
+import { zoom } from '../../shared/img'
 import axios from 'axios-jsonp-pro'
 import FormLayout from '@vkontakte/vkui/dist/components/FormLayout/FormLayout'
 import Button from '@vkontakte/vkui/dist/components/Button/Button'
 import Input from '@vkontakte/vkui/dist/components/Input/Input'
+import Div from '@vkontakte/vkui/dist/components/Div/Div'
+import Link from '@vkontakte/vkui/dist/components/Link/Link'
 import style from './CreateLessonPage.module.sass'
 
 export const CreateLessonPage = React.memo(() => {
@@ -12,44 +14,45 @@ export const CreateLessonPage = React.memo(() => {
     const [activeEmail, setEmail] = useState('')
     const [activeTopic, setTopic] = useState('')
     const [activeDate, setDate] = useState('')
+    const [activeConference, setConference] = useState(null)
 
     function createLesson() {
-        console.log(activeEmail)
-        // let userId = "BbERJ4OZS1KDFOSHdZglNw";
-        // let token = "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOm51bGwsImlzcyI6InlXQ1Z6YUxSU3JtVlJsQktPTjBqTUEiLCJleHAiOjE1ODkxMjE0OTQsImlhdCI6MTU4ODUxNjY5OH0.iB-wYBxEzDTsNLZBAfcZl8hfccYpZlRffuYbKyQcNVQ";
-        let urlUsers = 'https://skynets.space/users'
-        let usersId = 'BbERJ4OZS1KDFOSHdZglNw'
+       
+        let urlMeting = 'https://skynets.space/meetings';
 
-        axios.get(urlUsers)
-            .then(function (response) {
-                console.log(response)
-            })
-            .catch(function (error) {
-                console.log(error)
+        const data = new FormData()
+        data.append('topic', activeTopic)
+        data.append('start_time', activeDate + "T00:00:00Z")
+
+        axios.post(urlMeting, data, {
+            // receive two    parameter endpoint url ,form data
+        })
+            .then(res => { // then print response status
+                setConference(res.data.join_url);
+                console.log(res.data.join_url);
             })
 
     }
 
     function changeEmail(e) {
         setEmail(e.target.value)
-        console.log(e.target.value)
     }
 
     function changeTopic(e) {
         setTopic(e.target.value)
-        console.log(e.target.value)
     }
 
     function changeDate(e) {
         setDate(e.target.value)
-        console.log(e.target.value)
+
     }
 
     return (
         <>
-            <Header title={'Создаем урок'} background={'cyan'} icon={zoom}/>
+            <Header title={'Создаем урок'} background={'cyan'} icon={zoom} />
             <div className={style.createLesson}>
-
+                
+                {activeConference == null &&
                 <FormLayout>
 
                     <Input
@@ -65,21 +68,28 @@ export const CreateLessonPage = React.memo(() => {
                     <Input
                         value={activeTopic}
                         onChange={(e) => changeTopic(e)}
-                        top="Тема занятия"/>
+                        top="Тема занятия" />
 
                     <Input
                         value={activeDate}
                         onChange={(e) => changeDate(e)}
                         type="date"
-                        top="Дата начала урока"/>
+                        top="Дата начала урока" />
 
 
                     <Button size="xl" onClick={createLesson}>Создать урок</Button>
 
                 </FormLayout>
-
+                }
+                
+                {activeConference != null &&
+                    <Div>
+                        <h1>Ссылка на конференцию: {activeConference}</h1>
+                        <Link href={activeConference} target="_blank">Перейти в конференцию</Link>
+                    </Div>
+                }
             </div>
-            <Footer/>
+            <Footer />
         </>
     )
 })
