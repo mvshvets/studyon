@@ -5,11 +5,13 @@ import style from './ProspectsPage.module.sass'
 
 export const ProspectsPage = React.memo(() => {
     return (
-        <div className={style.prospects}>
+        <>
             <Header title={'ПЕРСПЕКТИВЫ'} background={'orange'} icon={rocket}/>
-            <Stub/>
+            <div className={style.prospects}>
+                <Stub/>
+            </div>
             <Footer/>
-        </div>
+        </>
     )
 })
 
