@@ -2,6 +2,8 @@ from providers.stepik import Stepik
 from resources.base import BaseResource
 from utils import dict_slice
 
+from exceptions import HTTP404Error
+
 class CourseList(BaseResource):
     def get(self):
         args = self.parse_args()
@@ -12,16 +14,15 @@ class CourseList(BaseResource):
 
         provider = Stepik(args.token)
 
-        try:
-            ids = args.ids if args.ids else []
-            if not args.ids and args.token:
-                courses = provider.request('user-courses', 'get')['user-courses']
-                for course in courses:
-                    ids.append(course['course'])
+        ids = args.ids if args.ids else []
+        if not args.ids and args.token:
+            courses = provider.request('user-courses', 'get')['user-courses']
+            for course in courses:
+                ids.append(course['course'])
 
-            for id_ in ids:
+        for id_ in ids:
+            try:
                 course_raw = provider.request('courses/{}'.format(id_), 'get')['courses'][0]
-
                 course = {
                     'id': course_raw['id'],
                     'title': course_raw['title'],
@@ -36,10 +37,21 @@ class CourseList(BaseResource):
 
                     course['progress'] = round(progress['n_steps_passed'] / progress['n_steps'] * 100, 2)
                     course['is_complete'] = progress['is_passed']
+                    course['is_subscribed'] = True
+                else:
+                    course['is_subscribed'] = False
+            except HTTP404Error:
+                course = {
+                    'id': id_,
+                    'title': '',
+                    'description': '',
+                    'is_subscribed': False
+                }
 
-                retval['courses'].append(dict_slice(course, args.columns))
-        except:
-            return {'courses': []}
+            except:
+                return {"courses": []}
+
+            retval['courses'].append(dict_slice(course, args.columns))
 
         return retval
 

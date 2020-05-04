@@ -2,6 +2,8 @@
 '''
 import requests
 
+from exceptions import HTTP404Error
+
 class Stepik(object):
     # Base endpoint
     endpoint = 'https://stepik.org/api'
@@ -31,5 +33,8 @@ class Stepik(object):
 
         if response.status_code == 200:
             return response.json()
+
+        if response.status_code == 404:
+            raise HTTP404Error('Page not found')
 
         raise requests.HTTPError('No available response')
