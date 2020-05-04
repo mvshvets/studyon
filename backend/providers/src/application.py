@@ -15,4 +15,4 @@ for route in routes:
     api.add_resource(routes[route], route, resource_class_args=(domain[route],))
 
 if __name__ == '__main__':
-    application.run(debug=True)
+    application.run(debug=False)
