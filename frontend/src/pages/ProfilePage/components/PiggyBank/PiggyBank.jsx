@@ -1,9 +1,9 @@
 import React from 'react'
 import {piggy_bank, hint_icon} from './img'
 import style from './PiggyBank.module.sass'
-import {Text14, Text18} from '../../../../shared/components'
+import {ButtonIcon, Text14, Text18} from '../../../../shared/components'
 
-export const PiggyBank = React.memo(() => {
+export const PiggyBank = React.memo(props => {
 
     return (
         <div className={style.piggyBank}>
@@ -15,7 +15,7 @@ export const PiggyBank = React.memo(() => {
                 </div>
             </div>
             <img src={piggy_bank} alt={'Копилка'} className={style.piggyBank__piggy}/>
-            <img src={hint_icon} alt={'Подсказка'} className={style.piggyBank__hint}/>
+            <ButtonIcon icon={hint_icon} onClick={props.setActiveModal} alt={'Подсказка'} className={style.piggyBank__hint} view={'MODAL_CARD_MONEY_SEND'}/>
         </div>
     )
 })

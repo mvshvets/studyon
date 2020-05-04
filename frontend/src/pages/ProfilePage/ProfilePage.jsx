@@ -1,11 +1,10 @@
 import React from 'react'
 import {Header, Footer} from '../../core/components'
 import {student} from '../../shared/img'
-import {achive1} from '../../shared/img/achives'
 import style from './ProfilePage.module.sass'
-import {Progress, PiggyBank} from './components'
+import {Progress, PiggyBank, Strides} from './components'
 
-export const ProfilePage = React.memo(() => {
+export const ProfilePage = React.memo(props => {
     return (
         <>
             <Header title={'ПРОФИЛЬ'} background={'purple'} icon={student} isSettings/>
@@ -15,13 +14,11 @@ export const ProfilePage = React.memo(() => {
                 <Progress/>
 
                 {/** Блок копилки */}
-                <PiggyBank/>
+                <PiggyBank setActiveModal={props.setActiveModal}/>
 
                 {/** Блок достижений*/}
-                <div>
-                    <div>Ваши достижения:</div>
-                    <img src={achive1} alt={'Копилка'}/>
-                </div>
+                <Strides/>
+
             </div>
             <Footer/>
         </>
