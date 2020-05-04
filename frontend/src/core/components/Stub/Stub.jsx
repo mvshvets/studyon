@@ -1,8 +1,9 @@
 import React from 'react'
+import style from './Stub.module.sass'
 
-export const StubPage = React.memo(() => {
+export const Stub = React.memo(() => {
     return (
-        <div style={{margin: 30}}>
+        <div className={style.stub}>
             <h1>Раздел в разработке</h1>
         </div>
     )

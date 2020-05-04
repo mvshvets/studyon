@@ -9,7 +9,8 @@ import FormLayout from '@vkontakte/vkui/dist/components/FormLayout/FormLayout';
 import Button from '@vkontakte/vkui/dist/components/Button/Button';
 import Input from '@vkontakte/vkui/dist/components/Input/Input';
 import {zoom} from '../../shared/img'
-import {Header} from '../../core/components'
+import {Footer, Header} from '../../core/components'
+import style from './ZoomPage.module.sass'
 
 
 
@@ -39,7 +40,7 @@ export const ZoomPage = React.memo(() => {
     }
 
     return (
-        <div>
+        <div className={style.zoom}>
             <Header title={'ZOOM-ZOOM'} background={'cyan'} icon={zoom}/>
             <Group>
                 <Cell expandable before={<Icon28AddOutline />} >
@@ -71,7 +72,7 @@ export const ZoomPage = React.memo(() => {
                 <Button size="xl" onClick={createLesson}>Создать урок</Button>
 
             </FormLayout>
-
+            <Footer/>
         </div>
 
     )
