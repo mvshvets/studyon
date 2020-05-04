@@ -9,7 +9,9 @@ export const ButtonIcon = React.memo(props => {
 		onClick(view)
 	}, [view, onClick])
 
-	return <button className={`${style.buttonIcon} ${className ? className : ''}`} onClick={handleButton}><img src={icon} alt={alt}/></button>
+	return <button className={`${style.buttonIcon} ${className ? className : ''}`} onClick={handleButton}>
+		<img src={icon} alt={alt} width={40} height={40}/>
+	</button>
 })
 
 ButtonIcon.propTypes = {
