@@ -9,7 +9,7 @@ export const Routing = React.memo(() => {
     const [activeModal, setActiveModal] = useState(null)
 
     /** TODO: найти коду модалки свое место в проекте */
-    const modal = (
+    /*const modal = (
         <ModalRoot activeModal={activeModal}>
         <ModalCard
             id={'MODAL_CARD_MONEY_SEND'}
@@ -26,7 +26,7 @@ export const Routing = React.memo(() => {
         >
         </ModalCard>
     </ModalRoot>
-    )
+    )*/
 
     return (
         <Root activeView={pageName}>
@@ -50,7 +50,7 @@ export const Routing = React.memo(() => {
             </View>
 
             {/** Сценарий профиля */}
-            <View id={'profile'} activePanel={panelName} modal={modal}>
+            <View id={'profile'} activePanel={panelName} modal={null}>
 
                 {/** Страница профиля */}
                 <Panel id={'profile'}>

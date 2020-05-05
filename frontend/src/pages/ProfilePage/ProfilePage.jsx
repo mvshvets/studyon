@@ -2,7 +2,7 @@ import React from 'react'
 import {Header, Footer} from '../../core/components'
 import {student} from '../../shared/img'
 import style from './ProfilePage.module.sass'
-import {Progress, PiggyBank, Strides} from './components'
+import {Progress, PiggyBank, Strides, ConnectOtherApp} from './components'
 
 export const ProfilePage = React.memo(props => {
     return (
@@ -18,6 +18,9 @@ export const ProfilePage = React.memo(props => {
 
                 {/** Блок достижений*/}
                 <Strides/>
+
+                {/** Блок привязки */}
+                <ConnectOtherApp/>
 
             </div>
             <Footer/>

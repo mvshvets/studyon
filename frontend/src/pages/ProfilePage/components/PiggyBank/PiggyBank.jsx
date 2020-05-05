@@ -14,7 +14,7 @@ export const PiggyBank = React.memo(props => {
                     <Text18 text={'(чеканных)'}/>
                 </div>
             </div>
-            <img src={piggy_bank} alt={'Копилка'} className={style.piggyBank__piggy}/>
+            <img src={piggy_bank} alt={'Копилка'} className={style.piggy}/>
             <ButtonIcon icon={hint_icon} onClick={props.setActiveModal} alt={'Подсказка'} className={style.piggyBank__hint} view={'MODAL_CARD_MONEY_SEND'} size={23}/>
         </div>
     )

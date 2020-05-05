@@ -4,7 +4,7 @@ import style from './Text18.module.sass'
 
 export const Text18 = React.memo(props => {
     const {text, className} = props
-    return <h3 className={`${style.text18} ${className ? className : ''}`}>{text}</h3>
+    return <p className={`${style.text18} ${className ? className : ''}`}>{text}</p>
 })
 
 Text18.propTypes = {
