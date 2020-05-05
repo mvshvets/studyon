@@ -1,0 +1,20 @@
+spring:
+  data:
+    mongodb:
+      host: ${ARANGO_HOST:3.19.63.58}
+      port: 27017
+      database: studyon
+      username: root
+      password: root
+      authentication-database: admin
+
+server:
+  ssl:
+    key-store-password: 12345678
+    key-alias: ssl-studyon
+    key-store: classpath:studyon.p12
+    key-store-type: PKCS12
+  port: 8080
+
+app:
+  python-service: ${PYTHON_SERVICE:http://3.19.63.58:8087}
