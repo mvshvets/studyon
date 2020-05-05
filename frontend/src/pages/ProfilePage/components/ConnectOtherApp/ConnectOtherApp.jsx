@@ -35,7 +35,7 @@ export const ConnectOtherApp = React.memo(() => {
                         <Text14 text={'Study hard. Teach harder.'} className={style.text2}/>
                     </div>
                 </div>
-                {userData.accounts.stepik ?
+                {userData && userData.accounts.stepik ?
                     <Text14 text={'Аккаунт на Stepik привязан'}/>
                     :
                     <Button text={<Text14 text={'Привязать аккаунт на Stepik'}/>} className={style.button} onClick={authStepik}/>
