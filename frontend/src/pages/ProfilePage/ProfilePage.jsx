@@ -1,12 +1,32 @@
-import React from 'react'
+import React, {useContext, useEffect} from 'react'
 import {Header, Footer} from '../../core/components'
 import {student} from '../../shared/img'
-import {achive1} from '../../shared/img/achives'
-import {piggy_bank, hint_icon} from './img'
 import style from './ProfilePage.module.sass'
-import {Progress} from './components'
+import {Progress, PiggyBank, Strides, ConnectOtherApp} from './components'
+import bridge from '@vkontakte/vk-bridge'
+import axios from 'axios-jsonp-pro'
+import {UserContext} from '../../core/context/User'
 
-export const ProfilePage = React.memo(() => {
+export const ProfilePage = React.memo(props => {
+    const {setUserData} = useContext(UserContext)
+
+    const fetchData = async () => {
+
+        const userVK = await bridge.send('VKWebAppGetUserInfo');
+
+        let urlUsers = "http://3.19.63.58:8080/user/"+ userVK.id;
+        let userData = await axios.jsonp(urlUsers)
+        console.log(userData);
+        setUserData(userData)
+
+        const token = await bridge.send("VKWebAppGetAuthToken", { "app_id": 7432322, "scope": "friends, video, groups" });
+        console.log(token.access_token);
+    }
+
+    useEffect(() => {
+        fetchData()
+    }, [fetchData])
+
     return (
         <>
             <Header title={'ПРОФИЛЬ'} background={'purple'} icon={student} isSettings/>
@@ -16,19 +36,14 @@ export const ProfilePage = React.memo(() => {
                 <Progress/>
 
                 {/** Блок копилки */}
-                <div>
-                    <div>В вашей копилке:</div>
-                    <div>{`${'0'} монет`}</div>
-                    <div>(чеканных)</div>
-                    <img src={piggy_bank} alt={'Копилка'}/>
-                    <img src={hint_icon} alt={'Подсказка'}/>
-                </div>
+                <PiggyBank setActiveModal={props.setActiveModal}/>
 
                 {/** Блок достижений*/}
-                <div>
-                    <div>Ваши достижения:</div>
-                    <img src={achive1} alt={'Копилка'}/>
-                </div>
+                <Strides/>
+
+                {/** Блок привязки */}
+                <ConnectOtherApp/>
+
             </div>
             <Footer/>
         </>

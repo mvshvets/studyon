@@ -1,0 +1,1 @@
+export {default as piggy_bank_yellow} from './piggy_bank_yaellow.png'

@@ -2,6 +2,7 @@ import React, {useCallback, useContext, useMemo} from 'react'
 import style from './Footer.module.sass'
 import {PageContext} from '../../context'
 import {ICONS_MENU} from './consts'
+import {ButtonIcon} from '../../../shared/components'
 
 export const Footer = React.memo(() => {
     const {setPageName, setPanelName} = useContext(PageContext)
@@ -12,7 +13,7 @@ export const Footer = React.memo(() => {
     }, [setPageName, setPanelName])
 
     const footerMenuRender = useMemo(() => {
-        return ICONS_MENU.map((item) => <img src={item.scr} alt={item.name} key={item.key} onClick={() => setNavigation(item.key)} width={35} height={35}/>)
+        return ICONS_MENU.map((item) => <ButtonIcon icon={item.scr} onClick={setNavigation} view={item.key} key={item.key} alt={item.name} size={35} />)
     }, [setNavigation])
 
     return (

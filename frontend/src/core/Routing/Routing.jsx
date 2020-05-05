@@ -1,11 +1,32 @@
-import React, {useContext} from 'react'
-import {Panel, Root, View} from '@vkontakte/vkui'
+import React, {useContext, useState} from 'react'
+import {ModalCard, ModalRoot, Panel, Root, View} from '@vkontakte/vkui'
 import {ZoomPage, ProfilePage, MainPage, UsefulPage, RatingPage, StorePage, ProspectsPage, SettingsPage,CreateLessonPage,CreateClassPage, InfoClassPage, InfoLessonPage} from '../../pages'
 import {PageContext} from '../context/Page'
 
 
 export const Routing = React.memo(() => {
     const {pageName, panelName} = useContext(PageContext)
+    const [activeModal, setActiveModal] = useState(null)
+
+    /** TODO: найти коду модалки свое место в проекте */
+    /*const modal = (
+        <ModalRoot activeModal={activeModal}>
+        <ModalCard
+            id={'MODAL_CARD_MONEY_SEND'}
+            onClose={() => setActiveModal(null)}
+            header="Отправляйте деньги друзьям, используя банковскую карту"
+            caption="Номер карты получателя не нужен — он сам решит, куда зачислить средства."
+            actions={[{
+                title: 'Попробовать',
+                mode: 'primary',
+                action: () => {
+                    setActiveModal('MODAL_CARD_MONEY_SEND')
+                }
+            }]}
+        >
+        </ModalCard>
+    </ModalRoot>
+    )*/
 
     return (
         <Root activeView={pageName}>
@@ -29,11 +50,11 @@ export const Routing = React.memo(() => {
             </View>
 
             {/** Сценарий профиля */}
-            <View id={'profile'} activePanel={panelName}>
+            <View id={'profile'} activePanel={panelName} modal={null}>
 
                 {/** Страница профиля */}
                 <Panel id={'profile'}>
-                    <ProfilePage/>
+                    <ProfilePage setActiveModal={setActiveModal}/>
                 </Panel>
 
                 {/** Страница настроек */}

@@ -3,10 +3,11 @@ import PropTypes from 'prop-types';
 import style from './Text14.module.sass'
 
 export const Text14 = React.memo(props => {
-    const {text} = props
-    return <h3 className={style.text14}>{text}</h3>
+    const {text, className} = props
+    return <p className={`${style.text14} ${className ? className : ''}`}>{text}</p>
 })
 
 Text14.propTypes = {
-    text: PropTypes.string.isRequired
+    text: PropTypes.string.isRequired,
+    className: PropTypes.string
 }
