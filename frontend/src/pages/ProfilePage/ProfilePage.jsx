@@ -29,7 +29,7 @@ export const ProfilePage = React.memo(props => {
 
     return (
         <>
-            <Header title={'ПРОФИЛЬ'} background={'purple'} icon={student} isSettings/>
+            <Header title={'ПРОФИЛЬ'} background={'purple'} icon={student}/>
             <div className={style.profile}>
 
                 {/** Блок достижений */}

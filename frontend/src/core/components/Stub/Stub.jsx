@@ -1,10 +1,14 @@
 import React from 'react'
+import stub from './stub.png'
 import style from './Stub.module.sass'
+import {H3} from '../../../shared/components'
 
 export const Stub = React.memo(() => {
     return (
         <div className={style.stub}>
-            <h1>Раздел в разработке</h1>
+            <H3 text={'Здесь будет'}/>
+            <H3 text={'красиво....'}/>
+            <img src={stub} alt={'Здесь будет красиво'} />
         </div>
     )
 })
