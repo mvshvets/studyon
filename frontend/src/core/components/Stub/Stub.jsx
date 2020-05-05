@@ -1,5 +1,5 @@
 import React from 'react'
-import stub from './stub.png'
+import stub from './stub.gif'
 import style from './Stub.module.sass'
 import {H3} from '../../../shared/components'
 
