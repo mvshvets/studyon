@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a227d95017118a2545f19b37cb931c60",
+    "revision": "bc0fb18ab8963d7612030ebaf8e20686",
     "url": "/studyon/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/studyon/static/css/2.cfd729e7.chunk.css"
   },
   {
-    "revision": "bbe695647ef8c5050e7f",
-    "url": "/studyon/static/css/main.f0cc2ff1.chunk.css"
+    "revision": "f91079ee7ae6cb1bf791",
+    "url": "/studyon/static/css/main.861bb84f.chunk.css"
   },
   {
     "revision": "8d5d807103234971bacc",
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/studyon/static/js/2.51a74733.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "bbe695647ef8c5050e7f",
-    "url": "/studyon/static/js/main.c46a18c7.chunk.js"
+    "revision": "f91079ee7ae6cb1bf791",
+    "url": "/studyon/static/js/main.988a9ac5.chunk.js"
   },
   {
     "revision": "108bd5b236504d6531be",
@@ -68,8 +68,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/studyon/static/media/store.edf51aaf.png"
   },
   {
-    "revision": "2d31c00a0d48022e4da3f5bdcd575cb8",
-    "url": "/studyon/static/media/stub.2d31c00a.png"
+    "revision": "c38e984835914bdcd69a5301f7c44acd",
+    "url": "/studyon/static/media/stub.c38e9848.gif"
   },
   {
     "revision": "9e30b1a30098eec23e68a674191ba521",

@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/studyon/static/css/main.f0cc2ff1.chunk.css",
-    "main.js": "/studyon/static/js/main.c46a18c7.chunk.js",
-    "main.js.map": "/studyon/static/js/main.c46a18c7.chunk.js.map",
+    "main.css": "/studyon/static/css/main.861bb84f.chunk.css",
+    "main.js": "/studyon/static/js/main.988a9ac5.chunk.js",
+    "main.js.map": "/studyon/static/js/main.988a9ac5.chunk.js.map",
     "runtime-main.js": "/studyon/static/js/runtime-main.09de619e.js",
     "runtime-main.js.map": "/studyon/static/js/runtime-main.09de619e.js.map",
     "static/css/2.cfd729e7.chunk.css": "/studyon/static/css/2.cfd729e7.chunk.css",
     "static/js/2.51a74733.chunk.js": "/studyon/static/js/2.51a74733.chunk.js",
     "static/js/2.51a74733.chunk.js.map": "/studyon/static/js/2.51a74733.chunk.js.map",
     "index.html": "/studyon/index.html",
-    "precache-manifest.847bb1d5086eb416c5c28c2462186b75.js": "/studyon/precache-manifest.847bb1d5086eb416c5c28c2462186b75.js",
+    "precache-manifest.c0765d58fc61fef35f81d4772cc498c3.js": "/studyon/precache-manifest.c0765d58fc61fef35f81d4772cc498c3.js",
     "service-worker.js": "/studyon/service-worker.js",
     "static/css/2.cfd729e7.chunk.css.map": "/studyon/static/css/2.cfd729e7.chunk.css.map",
-    "static/css/main.f0cc2ff1.chunk.css.map": "/studyon/static/css/main.f0cc2ff1.chunk.css.map",
+    "static/css/main.861bb84f.chunk.css.map": "/studyon/static/css/main.861bb84f.chunk.css.map",
     "static/js/2.51a74733.chunk.js.LICENSE.txt": "/studyon/static/js/2.51a74733.chunk.js.LICENSE.txt",
     "static/media/index.module.sass": "/studyon/static/media/SourceCodePro-Bold.03c11f6b.ttf",
     "static/media/cinema.png": "/studyon/static/media/cinema.c7395066.png",
@@ -20,7 +20,7 @@
     "static/media/Useful.module.sass": "/studyon/static/media/red.cf2684c8.png",
     "static/media/rocket.png": "/studyon/static/media/rocket.ee795edd.png",
     "static/media/store.png": "/studyon/static/media/store.edf51aaf.png",
-    "static/media/stub.png": "/studyon/static/media/stub.2d31c00a.png",
+    "static/media/stub.gif": "/studyon/static/media/stub.c38e9848.gif",
     "static/media/student.png": "/studyon/static/media/student.9e30b1a3.png",
     "static/media/zoom.png": "/studyon/static/media/zoom.d4bed585.png"
   },
@@ -28,7 +28,7 @@
     "static/js/runtime-main.09de619e.js",
     "static/css/2.cfd729e7.chunk.css",
     "static/js/2.51a74733.chunk.js",
-    "static/css/main.f0cc2ff1.chunk.css",
-    "static/js/main.c46a18c7.chunk.js"
+    "static/css/main.861bb84f.chunk.css",
+    "static/js/main.988a9ac5.chunk.js"
   ]
 }
