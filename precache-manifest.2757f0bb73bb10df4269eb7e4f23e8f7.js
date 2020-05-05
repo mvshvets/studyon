@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "bb4d32221510970e4b2a911319ed0e93",
+    "revision": "295f7b2ad48edfcbc3dc932c0f05088c",
     "url": "/studyon/index.html"
   },
   {
-    "revision": "60f0a066ac7cf11175b7",
+    "revision": "6aa8ff21c813df3f3ff3",
     "url": "/studyon/static/css/2.cfd729e7.chunk.css"
   },
   {
-    "revision": "a9ceb67e173c3542b3b4",
-    "url": "/studyon/static/css/main.47383367.chunk.css"
+    "revision": "dbe6c4aed5c3fe79ccbb",
+    "url": "/studyon/static/css/main.f00e0d59.chunk.css"
   },
   {
-    "revision": "60f0a066ac7cf11175b7",
-    "url": "/studyon/static/js/2.258676e1.chunk.js"
+    "revision": "6aa8ff21c813df3f3ff3",
+    "url": "/studyon/static/js/2.363d583d.chunk.js"
   },
   {
-    "revision": "13b685b3db9ae92c2d07c213e5e3506f",
-    "url": "/studyon/static/js/2.258676e1.chunk.js.LICENSE.txt"
+    "revision": "7b7161e7142752a5fe9b20e379974a5a",
+    "url": "/studyon/static/js/2.363d583d.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a9ceb67e173c3542b3b4",
-    "url": "/studyon/static/js/main.3fbcf013.chunk.js"
+    "revision": "dbe6c4aed5c3fe79ccbb",
+    "url": "/studyon/static/js/main.04776fd8.chunk.js"
   },
   {
     "revision": "108bd5b236504d6531be",
@@ -34,6 +34,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "e474950c99195b8351660048c58f63c0",
     "url": "/studyon/static/media/Jura-SemiBold.e474950c.ttf"
+  },
+  {
+    "revision": "e07df86cef2e721115583d61d1fb68a6",
+    "url": "/studyon/static/media/Roboto-Bold.e07df86c.ttf"
+  },
+  {
+    "revision": "11eabca2251325cfc5589c9c6fb57b46",
+    "url": "/studyon/static/media/Roboto-Regular.11eabca2.ttf"
   },
   {
     "revision": "03c11f6b0c0f707075d6483a78824c60",
